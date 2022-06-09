@@ -1,0 +1,119 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+.rocket
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader
+{
+ position: relative;   
+}
+.loader span
+{
+    position: relative;
+    font-size: 2em;
+    color: #fff;
+    filter: blur(1px);
+    display: inline-block;
+    text-transform: uppercase;
+    animation: animate 0.1s ease-in-out infinite;
+    animation-delay: calc(0.02s * var(--i));
+    /* animation-play-state: paused; */
+}
+.loader:hover span
+{
+    animation-play-state: running;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+    10%
+    {
+        transform: translatey(-60px);
+    }
+}
+.scene .rocket:before
+{
+    content: '';
+    position: absolute;
+    bottom: -255px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 200px;
+    border-radius: 40%;
+    background: linear-gradient(#c30707,transparent);
+}
+.scene .rocket::after
+{
+    content: '';
+    position: absolute;
+    bottom: -255px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 230px;
+    background: linear-gradient(#c30707,transparent);
+    filter: blur(20px);
+}
+.scene .rocket
+{
+    position: relative;
+    animation: animate 0.1s ease-in-out infinite;
+    animation-delay: calc(0.03s * var(--i));
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(-3px);
+    }
+    10%
+    {
+        transform: translateY(3px);
+    } 
+}
+.scene i
+{
+    position: absolute;
+    top: -250px;
+    background : rgba(255, 255, 255, 0.705);
+    filter: blur(2px);
+    animation: animateStars linear infinite;
+}
+.scene u
+{
+    position: absolute;
+    top: -250px;
+    background : rgba(254, 250, 0, 0.945);
+    filter: blur(0.3px);
+    animation: animateStars linear infinite;
+}
+@keyframes animateStars
+{
+    0%
+    {
+        transform: translateY(0);
+    }
+    100%
+    {
+        transform: translateY(200vh );
+    }
+}

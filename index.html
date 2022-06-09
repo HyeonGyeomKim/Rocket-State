@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Play State</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="scene">
+        <div class="loader">
+            <div class="rocket">
+                <img src="img/rocket.png">
+            </div>
+            <span style="--i:1;">S</span>
+            <span style="--i:2;">y</span>
+            <span style="--i:3;">s</span>
+            <span style="--i:4;">t</span>
+            <span style="--i:5;">e</span>
+            <span style="--i:6;">m</span>
+            <span style="--i:7;">.</span>
+            <span style="--i:8;">o</span>
+            <span style="--i:9;">u</span>
+            <span style="--i:10;">t</span>
+            <span style="--i:11;">.</span>
+            <span style="--i:12;">P</span>
+            <span style="--i:13;">r</span>
+            <span style="--i:14;">i</span>
+            <span style="--i:15;">n</span>
+            <span style="--i:16;">t</span>
+            <span style="--i:17;">l</span>
+            <span style="--i:18;">n</span>
+            <span style="--i:19;">(</span>
+            <span style="--i:20;">"</span>
+            <span style="--i:21;">H</span>
+            <span style="--i:22;">e</span>
+            <span style="--i:23;">l</span>
+            <span style="--i:24;">l</span>
+            <span style="--i:25;">o</span>
+            <span style="--i:26;">_</span>
+            <span style="--i:27;">W</span>
+            <span style="--i:28;">o</span>
+            <span style="--i:29;">r</span>
+            <span style="--i:30;">l</span>
+            <span style="--i:31;">d</span>
+            <span style="--i:32;">"</span>
+            <span style="--i:33;">)</span>
+            <span style="--i:34;">;</span>
+            <span style="--i:35;"></span>
+            <script>
+                function stars(){
+                    let count = 20;
+                    let scene = document.querySelector('.scene');
+                    let i = 0;
+                    while(i < count){
+                        let star = document.createElement('i');
+                        let x = Math.floor(Math.random() * window.innerWidth);
+    
+                        let duration = Math.random() * 0.4;
+                        let h = Math.random() * 200;
+                        let b = Math.random() * 5;
+    
+                        star.style.left = x + 'px';
+                        star.style.width = 1 + 'px';
+                        star.style.height = 50+ h + 'px';
+                        star.style.animationDuration = duration + 's';
+                        star.style.filter = `blur(${b}px)`;
+    
+                        scene.appendChild(star);
+                        i++
+                    }
+                }
+                stars();
+            </script>
+            <script>
+                function stars2(){
+                    let count = 20;
+                    let scene = document.querySelector('.scene');
+                    let u = 0;
+                    while(u < count){
+                        let yellowstar = document.createElement('u');
+                        let x = Math.floor(Math.random() * window.innerWidth);
+    
+                        let duration = Math.random() * 10;
+                        let h = Math.random() * 1.1;
+    
+                        yellowstar.style.left = x + 'px';
+                        yellowstar.style.width = 1 + 'px';
+                        yellowstar.style.height = 1+ h + 'px';
+                        yellowstar.style.animationDuration = duration + 's';
+    
+                        scene.appendChild(yellowstar);
+                        u++
+                    }
+                }
+                stars2();
+            </script>
+        </div>  
+        </div>
+    </body>
+</html>
